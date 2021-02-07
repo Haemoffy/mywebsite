@@ -176,6 +176,10 @@ select {
   vertical-align: middle;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* h1::selection {
     background-color: #eee;
     color: #111;
