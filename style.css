@@ -267,7 +267,7 @@ body::before {
 .welcome {
   font-size: 60px;
   font-weight: 700;
-  text-shadow: 8px 8px 0 #111;
+  text-shadow: 6px 6px 0 #111;
   margin: 0 0 0 30px;
   animation: welcome 0.35s cubic-bezier(0.86, -0.07, 0.67, 1.87) forwards 1;
   opacity: 0;
