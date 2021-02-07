@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Pyonii</title>
+    <meta name="description" content="this is a portfolio website if you assume if it is build by Pyonii also known as Haemoffy, my website is currently on beta so apparently, contents inside doesn't given a life yet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="header-grow">
+        <header class="nav nav-wrap" id="pageNav">
+            <div class="logo" data-tooltip="It's me">Pyonii
+                <a href="https://github.com/Haemoffy" target="_blank" class="social-links"><i class="fab fa-github"></i></a>
+                <a href="https://twitter.com/haemoffy" target="_blank" class="social-links"><i class="fab fa-twitter"></i></a>
+            </div>
+            <div class="bars"><a href="#" onclick="mobileMenu()" class="mobile-menu" id="mobile-menu"><i class="fas fa-bars"></i></a>
+            </div>
+            <nav class="main-nav" id="main-nav">
+                <ul>
+                    <li><a href="#" class="link" id="home" onclick="navAlert()">Home</a></li>
+                    <li><a href="#" class="link" id="about" onclick="navAlert()">About</a></li>
+                    <li><a href="#" class="link" id="project" onclick="navAlert()">Projects</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+    <div class="flex wrap">
+        <h1 class="welcome">Welcome.</h1>
+        <button onclick="navFunction() " class="boy-btn" aria-label="click to open page links" data-tooltip="Click me!"><img class="boy" src="img/boy fall.png" alt="boy falling" /></button>
+    </div>
+
+    <script src="webfunc.js" defer></script>
+</body>
+
+</html>

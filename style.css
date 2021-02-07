@@ -1,0 +1,605 @@
+@import url("https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,700;1,100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,300;0,400;0,500;0,700;1,100&family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,700;1,100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,500;1,700&display=swap");
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  text-decoration: none;
+}
+
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+body {
+  line-height: 1;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+nav ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+
+/* change colours to suit your needs */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title],
+dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* change border colour to suit your needs */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+input,
+select {
+  vertical-align: middle;
+}
+
+a,
+button {
+  outline: none;
+  color: #fff;
+}
+
+a:hover,
+a:focus {
+  color: inherit;
+  text-decoration: none;
+}
+
+:root {
+  --accent: #3c3c3c;
+  --accent-2: #303030;
+  --video-bg: #111;
+  --hover: #464646;
+  --input-clr: #c7c7c7;
+  --header-bg: #202020;
+}
+
+/* my code */
+@font-face {
+  font-family: 'OMORI';
+  src: url("fonts/omori_game2-webfont.woff2") format("woff2"), url("fonts/omori_game2-webfont.woff") format("woff"), url("fonts/omori_game2-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-size: 12px;
+  /*font-family: 'Hachi Maru Pop', cursive;*/
+  font-family: 'Montserrat Alternates', 'Montserrat', sans-serif;
+  font-weight: 400;
+  box-sizing: border-box;
+  color: #fff;
+  list-style: none;
+  overflow-x: hidden;
+  background-color: #111;
+  min-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+body::before {
+  /* flex: 1 0 auto; */
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  /* min-width: 100vw; */
+  background: url(img/webbg.png);
+  background-size: cover;
+  background-position: top 15% left 0;
+  background-repeat: no-repeat;
+  -webkit-mask-image: linear-gradient(to bottom, rgba(17, 17, 17, 0.3), #fff, #fff, #fff);
+  mask-image: linear-gradient(to bottom, rgba(17, 17, 17, 0.3), white, white, white);
+  z-index: -3;
+}
+
+.fas {
+  font-size: 1.2rem;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.wrap {
+  width: 800px;
+  margin: 0 auto 13rem;
+}
+
+.welcome {
+  font-size: 60px;
+  font-weight: 700;
+  text-shadow: 8px 8px 0 #111;
+  margin: 0 0 0 30px;
+  animation: welcome 0.35s cubic-bezier(0.86, -0.07, 0.67, 1.87) forwards 1;
+  opacity: 0;
+  transform: translateY(-50px);
+}
+
+@keyframes welcome {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+.boy-btn {
+  background: none;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  margin-right: 5rem;
+}
+
+.boy-btn .boy {
+  width: 125px;
+}
+
+.boy-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #111;
+  background: url(img/bad_tv_roll.gif);
+  background-size: cover;
+  background-position: top 15% left 0;
+  background-repeat: no-repeat;
+  -webkit-mask-image: linear-gradient(to bottom, rgba(17, 17, 17, 0.3), #fff, #fff, #fff);
+  mask-image: linear-gradient(to bottom, rgba(17, 17, 17, 0.3), #fff, #fff, #fff);
+  z-index: -2;
+  display: none;
+}
+
+.boy-btn::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  opacity: 1;
+  color: #111;
+  font-size: 2.7rem;
+  font-family: 'OMORI';
+  pointer-events: none;
+  opacity: 0;
+}
+
+.boy-btn:hover::before {
+  display: block;
+}
+
+.boy-btn:hover::after {
+  opacity: 1;
+}
+
+/* == nav == */
+.header-grow {
+  flex-grow: 1;
+  margin-bottom: 10rem;
+}
+
+.nav-wrap {
+  max-width: 1034px;
+  margin: 0 auto;
+}
+
+#pageNav {
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+  animation: welcome 0.35s cubic-bezier(0.86, -0.07, 0.67, 1.87) forwards 1;
+}
+
+#pageNav .logo {
+  font-size: 36px;
+  font-weight: 700;
+  font-family: 'Hachi Maru Pop', cursive;
+  text-shadow: 3px 3px 0 #111;
+  margin-bottom: 1rem;
+}
+
+#pageNav .logo .social-links {
+  font-size: 28px;
+  margin-left: 1rem;
+}
+
+#pageNav .logo .social-links:hover, #pageNav .logo .social-links:focus {
+  color: rgba(255, 255, 255, 0.596);
+}
+
+#pageNav .logo .social-links:last-child {
+  margin-left: .5rem;
+}
+
+#pageNav .bars {
+  display: none;
+}
+
+#pageNav .main-nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#pageNav .main-nav ul li {
+  padding: 0 1rem;
+  margin-left: 3rem;
+}
+
+#pageNav .main-nav ul li .link {
+  font-size: 20px;
+  font-weight: 500;
+  text-shadow: 2px 2px 0 #111;
+  position: relative;
+}
+
+#pageNav .main-nav ul li .link::before {
+  position: absolute;
+  left: -2.5rem;
+  bottom: .1rem;
+  /* font aesome */
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  pointer-events: none;
+  /* transition */
+  transform-origin: right;
+  transition: all 0.15s cubic-bezier(0.86, -0.07, 0.67, 1.87);
+  transform: translateX(20px);
+  opacity: 0;
+}
+
+#pageNav .main-nav ul li .link:hover::before,
+#pageNav .main-nav ul li .link:focus::before {
+  transform: translateX(0px);
+  opacity: 1;
+}
+
+#pageNav .main-nav ul li #home::before {
+  content: "\f015";
+  font-size: 1.5rem;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+}
+
+#pageNav .main-nav ul li #about::before {
+  content: "\f007";
+  font-size: 1.5rem;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+}
+
+#pageNav .main-nav ul li #project::before {
+  content: "\f1c9";
+  font-size: 1.5rem;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+}
+
+@media all and (orientation: portrait) {
+  body::before {
+    background-position: center;
+  }
+  .flex {
+    flex-direction: column;
+  }
+  .wrap {
+    width: 300px;
+    margin-bottom: 4.5rem;
+  }
+  .welcome {
+    margin-left: 0;
+    font-size: 50px;
+    text-shadow: 6px 6px 0 #111;
+  }
+  .boy-btn {
+    margin-right: 0;
+    margin-top: 4rem;
+  }
+  .boy-btn::before {
+    background-position: center;
+  }
+  .boy-btn::after {
+    opacity: 1;
+  }
+  .boy-btn:hover::after {
+    opacity: unset;
+  }
+  .boy-btn:hover::before {
+    display: none;
+  }
+  .header-grow {
+    margin-bottom: 5rem;
+    position: relative;
+  }
+  .nav-wrap {
+    max-width: 1024px;
+  }
+  #pageNav {
+    margin: 0;
+  }
+  #pageNav .logo {
+    font-size: 33px;
+    margin-left: 15px;
+  }
+  #pageNav .logo .social-links {
+    font-size: 25px;
+  }
+  #pageNav .bars {
+    display: block;
+    margin-bottom: .5rem;
+  }
+  #pageNav .bars #mobile-menu {
+    display: flex;
+    align-items: center;
+  }
+  #pageNav .bars #mobile-menu .fa-bars {
+    padding: 0 1rem;
+    font-size: 2rem;
+    text-shadow: 3px 3px 0 #111;
+  }
+  #pageNav #main-nav {
+    display: none;
+    position: absolute;
+    top: -1rem;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(17, 17, 17, 0.6);
+    z-index: -1;
+    height: 0;
+    animation: navHeight 0.3s linear forwards 1;
+  }
+  #pageNav #main-nav::before, #pageNav #main-nav::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+  }
+  #pageNav #main-nav::before {
+    top: 6rem;
+  }
+  #pageNav #main-nav ul {
+    margin-top: 6.5rem;
+    flex-direction: column;
+    transform: scaleX(0);
+    animation: ulScale 0.3s linear forwards 1 0.3s;
+  }
+  #pageNav #main-nav ul li {
+    margin-left: 1.4rem;
+    padding: 1.5rem;
+  }
+  #pageNav #main-nav ul li .link {
+    font-size: 23px;
+    padding: 1em;
+  }
+  #pageNav #main-nav ul li .link::before {
+    top: 23px;
+    opacity: 1;
+    transform: translateX(10px);
+    pointer-events: all;
+  }
+  #pageNav #main-nav ul li .link:hover {
+    transform: unset;
+    opacity: unset;
+  }
+}
+
+@keyframes navHeight {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 335px;
+  }
+}
+
+@keyframes ulScale {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+@media all and (max-width: 361px) {
+  .logo {
+    margin-left: 10px !important;
+  }
+}
+
+@media all and (min-height: 900px) {
+  .wrap {
+    width: 800px;
+    margin-bottom: 15rem;
+  }
+  .welcome {
+    font-size: 70px;
+  }
+  .logo {
+    margin-left: 30px !important;
+    font-size: 40px !important;
+  }
+  .bars {
+    margin-right: 30px !important;
+  }
+  #main-nav ul {
+    margin-top: 6rem !important;
+  }
+  #main-nav ul li .link {
+    font-size: 30px !important;
+  }
+  #main-nav ul li .link::before {
+    top: 36px !important;
+  }
+}
+
+@media all and (min-width: 800px) and (max-width: 1000px) {
+  .wrap {
+    width: 750px;
+    margin-bottom: 15rem;
+  }
+  .nav-wrap {
+    max-width: 800px;
+  }
+}
