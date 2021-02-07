@@ -176,6 +176,11 @@ select {
   vertical-align: middle;
 }
 
+/* h1::selection {
+    background-color: #eee;
+    color: #111;
+}
+ */
 a,
 button {
   outline: none;
