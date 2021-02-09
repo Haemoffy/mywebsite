@@ -236,13 +236,15 @@ a:focus {
 body {
     @include font(12px,
     400);
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
     color: #fff;
     list-style: none;
-    overflow-x: hidden;
+    overflow: hidden;
     background-color: #111;
     min-width: 100vw;
-    min-height: 100vh;
+    min-height: 90vh;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -254,11 +256,11 @@ body {
         bottom: 0;
         left: 0;
         right: 0;
-        /* min-width: 100vw; */
+        width: 100%;
+        height: 100%;
         background: url(img/webbg.png);
         background-size: cover;
         background-position: top 15% left 0;
-        background-repeat: no-repeat;
         -webkit-mask-image: linear-gradient(to bottom, rgba(17, 17, 17, 0.3), #fff, #fff, #fff);
         mask-image: linear-gradient(to bottom, rgba(17, 17, 17, 0.3), white, white, white);
         z-index: -3;
@@ -277,7 +279,7 @@ body {
 
 .wrap {
     width: 800px;
-    margin: 0 auto 13rem;
+    margin: 0 auto 9rem;
 }
 
 .welcome {
@@ -461,10 +463,12 @@ body {
         margin-left: 0;
         font-size: 50px;
         text-shadow: 6px 6px 0 #111;
+        position: relative;
+        z-index: -1;
     }
     .boy-btn {
         margin-right: 0;
-        margin-top: 4rem;
+        margin-top: 3.5rem;
         &::before {
             background-position: center;
         }
@@ -529,7 +533,7 @@ body {
                 background-color: #fff;
             }
             &::before {
-                top: 6rem;
+                top: 5.7rem;
             }
             ul {
                 margin-top: 6.5rem;
@@ -586,7 +590,7 @@ body {
 @media all and (min-height: 900px) {
     .wrap {
         width: 800px;
-        margin-bottom: 15rem;
+        margin-bottom: 12rem;
     }
     .welcome {
         font-size: 70px;
@@ -620,5 +624,32 @@ body {
     }
     .nav-wrap {
         max-width: 800px;
+    }
+}
+
+@media all and (max-width: 420px) {
+    .logo {
+        font-size: 23px !important;
+    }
+    #main-nav {
+        animation: navHeight420px 0.3s linear forwards 1 !important;
+    }
+    .link {
+        font-size: 20px !important;
+        &::before {
+            top: 18px !important;
+        }
+    }
+    .fa-bars {
+        font-size: 1.5rem !important;
+    }
+}
+
+@keyframes navHeight420px {
+    0% {
+        height: 0;
+    }
+    100% {
+        height: 315px;
     }
 }
